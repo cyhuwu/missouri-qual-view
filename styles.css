@@ -1,0 +1,138 @@
+/* styles.css - USS Missouri Qualification Database
+   Created: 2026-08-05
+   Purpose: Basic responsive header layout with branding icon on the left
+            and a login button on the right. Accessible focus styles included.
+*/
+
+:root{
+  --navy:#012a4a;
+  --gold:#d4af37;
+  --white:#ffffff;
+  --muted:#f4f6f8;
+  --max-width:1100px;
+  --gap:1rem;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{
+  margin:0;
+  background:var(--muted);
+  color:#0b1b2b;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Header */
+.site-header{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:var(--gap);
+  background:linear-gradient(180deg,var(--navy),#06304e);
+  color:var(--white);
+  padding:0.75rem 1rem;
+  box-shadow:0 2px 6px rgba(2,10,20,0.2);
+}
+
+/* constrain content width */
+.site-header > *{
+  max-width:var(--max-width);
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:0.5rem;
+  text-decoration:none;
+  color:inherit;
+}
+.brand-icon{
+  width:52px;
+  height:52px;
+  object-fit:cover;
+  border-radius:8px;
+  display:block;
+  border:2px solid rgba(255,255,255,0.15);
+}
+
+.site-title{
+  margin:0;
+  text-align:center;
+  font-size:1.125rem;
+  font-weight:600;
+  letter-spacing:0.2px;
+}
+
+.login-button{
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+  padding:0.5rem 0.9rem;
+  background:var(--gold);
+  color:var(--navy);
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  border:0;
+  box-shadow:0 1px 0 rgba(0,0,0,0.05) inset;
+}
+
+.login-button:hover{filter:brightness(0.98);transform:translateY(-1px)}
+.login-button:active{transform:translateY(0)}
+
+/* Focus states for accessibility */
+:focus{outline:none}
+.brand:focus-visible, .login-button:focus-visible{
+  outline:3px solid rgba(212,175,55,0.25);
+  outline-offset:3px;
+}
+
+/* Main content */
+.content{padding:2rem 1rem}
+.hero{
+  max-width:var(--max-width);
+  margin:0 auto;
+  background:var(--white);
+  border-radius:10px;
+  padding:2rem;
+  box-shadow:0 6px 18px rgba(2,10,20,0.08);
+}
+
+/* Responsive adjustments */
+@media (max-width:720px){
+  .site-header{
+    grid-template-columns:auto 1fr auto;
+    padding:0.5rem;
+  }
+  .brand-icon{width:44px;height:44px}
+  .site-title{font-size:1rem}
+  .login-button{padding:0.4rem 0.7rem}
+}
+
+@media (max-width:520px){
+  /* Stack header items on small screens */
+  .site-header{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+      "brand login"
+      "title title";
+    row-gap:0.5rem;
+    text-align:center;
+  }
+  .brand{grid-area:brand;justify-self:start}
+  .login-button{grid-area:login;justify-self:end}
+  .site-title{grid-area:title}
+}
+
+/* Utility for visually-hidden content (if needed) */
+.sr-only{
+  position:absolute!important;
+  height:1px;width:1px;overflow:hidden;
+  clip:rect(1px,1px,1px,1px);white-space:nowrap;
+}
