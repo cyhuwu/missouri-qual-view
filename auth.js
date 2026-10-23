@@ -1,4 +1,4 @@
-const AUTH_KEY = "missouri-qual-view-authenticated";
+const AUTH_KEY = "7XiIP6bwFzsoypPp1nr5TIj5h98SyZIN";
 const USERNAME = "1234";
 const PASSWORD = "1234";
 
