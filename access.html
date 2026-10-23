@@ -4,6 +4,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Access | USS Missouri Qualification Database</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="auth.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -22,13 +23,14 @@
       <h2 id="access-title">Database access</h2>
       <p class="access-description">Sign in with your assigned account to continue to the qualification database.</p>
 
-      <form class="access-form" action="/login" method="post">
+      <form class="access-form" id="login-form">
         <label for="username">Username</label>
         <input id="username" name="username" type="text" autocomplete="username" required>
 
         <label for="password">Password</label>
         <input id="password" name="password" type="password" autocomplete="current-password" required>
 
+        <p id="login-error" class="login-error" role="alert" hidden>Incorrect username or password.</p>
         <button class="access-submit" type="submit">Sign in</button>
       </form>
     </section>

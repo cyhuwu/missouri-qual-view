@@ -2,6 +2,7 @@
    Created: 2026-08-05
    Purpose: Basic responsive header layout with branding icon on the left
             and a login button on the right. Accessible focus styles included.
+      Note: DESIGNED WITH GITHUB COPILOT CLI. 
 */
 
 :root{
@@ -78,8 +79,10 @@ body{
   color:var(--navy);
   border-radius:8px;
   text-decoration:none;
+  font:inherit;
   font-weight:600;
   border:0;
+  cursor:pointer;
   box-shadow:0 1px 0 rgba(0,0,0,0.05) inset;
 }
 
@@ -155,6 +158,11 @@ body{
 .access-submit:focus-visible{
   outline:3px solid rgba(212,175,55,0.65);
   outline-offset:3px;
+}
+.login-error{
+  margin:0.25rem 0;
+  color:#a11b1b;
+  font-size:0.9rem;
 }
 
 /* Focus states for accessibility */

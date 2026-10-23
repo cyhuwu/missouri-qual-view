@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>USS Missouri Qualification Database</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="auth.js" defer></script>
 </head>
-<body>
+<body data-auth-required hidden>
   <header class="site-header">
     <a href="index.html" class="brand" aria-label="Home">
       <img src="17859146838312775321325180096476.jpg" alt="USS Missouri icon" class="brand-icon">
@@ -14,7 +15,7 @@
 
     <h1 class="site-title">USS Missouri Qualification Database</h1>
 
-    <a class="login-button" href="access.html">ACCESS</a>
+    <button class="login-button" id="logout" type="button">LOG OUT</button>
   </header>
 
   <main class="content">

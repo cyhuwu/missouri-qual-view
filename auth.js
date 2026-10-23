@@ -1,0 +1,36 @@
+const AUTH_KEY = "missouri-qual-view-authenticated";
+const USERNAME = "1234";
+const PASSWORD = "1234";
+
+if (document.body.hasAttribute("data-auth-required")) {
+  if (sessionStorage.getItem(AUTH_KEY) !== "true") {
+    window.location.replace("access.html");
+  } else {
+    document.body.hidden = false;
+  }
+
+  document.getElementById("logout").addEventListener("click", () => {
+    sessionStorage.removeItem(AUTH_KEY);
+    window.location.replace("access.html");
+  });
+}
+
+const loginForm = document.getElementById("login-form");
+if (loginForm) {
+  loginForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+    const error = document.getElementById("login-error");
+
+    if (username === USERNAME && password === PASSWORD) {
+      sessionStorage.setItem(AUTH_KEY, "true");
+      window.location.replace("index.html");
+      return;
+    }
+
+    error.hidden = false;
+    document.getElementById("password").focus();
+  });
+}
