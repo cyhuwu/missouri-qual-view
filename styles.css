@@ -86,6 +86,77 @@ body{
 .login-button:hover{filter:brightness(0.98);transform:translateY(-1px)}
 .login-button:active{transform:translateY(0)}
 
+/* Access page */
+.access-content{
+  display:flex;
+  justify-content:center;
+  padding-top:clamp(2rem,8vh,5rem);
+}
+.access-card{
+  width:min(100%,440px);
+  align-self:flex-start;
+  background:var(--white);
+  border-radius:10px;
+  padding:clamp(1.5rem,5vw,2.5rem);
+  box-shadow:0 6px 18px rgba(2,10,20,0.08);
+}
+.eyebrow{
+  margin:0 0 0.75rem;
+  color:#526678;
+  font-size:0.75rem;
+  font-weight:700;
+  letter-spacing:0.08em;
+}
+.access-card h2{
+  margin:0;
+  color:var(--navy);
+  font-size:1.75rem;
+}
+.access-description{
+  margin:0.75rem 0 1.75rem;
+  color:#526678;
+  line-height:1.5;
+}
+.access-form{
+  display:grid;
+  gap:0.6rem;
+}
+.access-form label{
+  margin-top:0.45rem;
+  font-size:0.9rem;
+  font-weight:600;
+}
+.access-form input{
+  width:100%;
+  min-height:2.8rem;
+  padding:0.65rem 0.75rem;
+  border:1px solid #aebbc6;
+  border-radius:6px;
+  background:var(--white);
+  color:#0b1b2b;
+  font:inherit;
+}
+.access-form input:focus-visible{
+  outline:3px solid rgba(1,42,74,0.2);
+  border-color:var(--navy);
+}
+.access-submit{
+  min-height:2.9rem;
+  margin-top:1rem;
+  border:0;
+  border-radius:6px;
+  background:var(--navy);
+  color:var(--white);
+  font:inherit;
+  font-weight:700;
+  cursor:pointer;
+}
+.access-submit:hover{filter:brightness(1.15)}
+.access-submit:focus-visible{
+  outline:3px solid rgba(212,175,55,0.65);
+  outline-offset:3px;
+}
+
 /* Focus states for accessibility */
 :focus{outline:none}
 .brand:focus-visible, .login-button:focus-visible{
