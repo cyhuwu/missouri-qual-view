@@ -16,6 +16,20 @@ if (document.body.hasAttribute("data-auth-required")) {
 }
 
 const loginForm = document.getElementById("login-form");
+const authenticatedActions = document.getElementById("authenticated-actions");
+if (authenticatedActions && loginForm) {
+  const isAuthenticated = sessionStorage.getItem(AUTH_KEY) === "true";
+  loginForm.hidden = isAuthenticated;
+  authenticatedActions.hidden = !isAuthenticated;
+}
+
+const addQualificationButton = document.getElementById("add-qualification");
+if (addQualificationButton) {
+  addQualificationButton.addEventListener("click", () => {
+    window.location.assign("addqual.html");
+  });
+}
+
 if (loginForm) {
   loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -26,7 +40,7 @@ if (loginForm) {
 
     if (username === USERNAME && password === PASSWORD) {
       sessionStorage.setItem(AUTH_KEY, "true");
-      window.location.replace("index.html");
+      window.location.replace("access.html");
       return;
     }
 

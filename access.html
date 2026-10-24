@@ -21,7 +21,7 @@
     <section class="access-card" aria-labelledby="access-title">
       <p class="eyebrow">USS MISSOURI (SSN 780)</p>
       <h2 id="access-title">Database access</h2>
-      <p class="access-description">Sign in with your assigned account to continue to the qualification database.</p>
+      <p class="access-description">Sign in with your assigned account to open the qualification database.</p>
 
       <form class="access-form" id="login-form">
         <label for="username">Username</label>
@@ -33,6 +33,11 @@
         <p id="login-error" class="login-error" role="alert" hidden>Incorrect username or password.</p>
         <button class="access-submit" type="submit">Sign in</button>
       </form>
+
+      <div id="authenticated-actions" hidden>
+        <p class="access-description">You are signed in. Continue to add a qualification.</p>
+        <button class="access-submit" id="add-qualification" type="button">Add qualification</button>
+      </div>
     </section>
   </main>
 </body>
