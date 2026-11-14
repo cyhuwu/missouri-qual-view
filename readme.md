@@ -6,6 +6,7 @@
 2. Website Treemap
 3. Database Credentials 
  - Link to Database
+4. Update Log
 
 ***
 
@@ -24,31 +25,37 @@ DO NOT OPEN A FOLDER FOR FRONTEND
 
 ```
 .
+├── access.html
+├── addqual.html
 ├── css
 │   └── styles.css
-├── html
-│   ├── access.html
-│   ├── addqual.html
-│   └── index.html
 ├── images
 │   ├── 17859146838312775321325180096476.jpg
 │   ├── IMG_0064.webp
 │   └── missouri.jpg
+├── index.html
 ├── js
 │   └── auth.js
 ├── md
 │   └── RESET-PW.md
 ├── readme.md
-└── tree.txt
+└── .github
+    └── agents
+        └── missouri.agent.md
 
 6 directories, 11 files
 ```
 
 ## 3. Database Credentials 
 
-# Link to Database
+### Link to Database
 
 tbd 
 
-# Credentials 
+### Credentials
 tbd
+
+
+## 4. Update Log
+
+- 2026-11-14: Update managed through GitHub Copilot Pro (Auto mode)
