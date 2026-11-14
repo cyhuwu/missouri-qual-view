@@ -6,7 +6,9 @@
 2. [Website Treemap](#2-website-treemap)
 3. [Current Frontend Flow](#3-current-frontend-flow)
 4. [Database Credentials](#4-database-credentials)
-5. [Update Log](#5-update-log)
+5. [Update Log](#5-update-log)  
+
+This ```.md``` file is organised by GitHub Copilot AI. 
 
 ***
 
