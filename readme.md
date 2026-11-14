@@ -20,9 +20,7 @@ This ```.md``` file is organised by GitHub Copilot AI.
 
 ***
 
-## 2. Website Treemap ![GitHub tag (latest by date)](https://shields.io/github/v/tag/cyhuwu/missouri-qual-view)
-
-
+## 2. Website Treemap
 **Apparently, production environment doesn't want you to put it into folders without redirecting all the paths.**  
 DO NOT OPEN A FOLDER FOR FRONTEND
 
